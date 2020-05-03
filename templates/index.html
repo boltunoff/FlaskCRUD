@@ -17,8 +17,9 @@
     <tbody>
       {% for grocery in groceries %}
       <tr>
-        <td><a href="/update/{{grocery.id}}">{{ grocery.name }}</a></td>
+        <td><a href="">{{ grocery.name }}</a></td>
         <td>{{ grocery.created_at.date() }}</td>
+        <td class="text-right"><a class="btn btn-danger btn-sm" href="/update/{{ grocery.id }}" role="button">Update</a></td>
         <td class="text-right"><a class="btn btn-danger btn-sm" href="/delete/{{ grocery.id }}" role="button">Delete</a></td>
 
       </tr>
@@ -29,6 +30,6 @@
 
 <div class="contaier">
   {% include 'snippets/form.html' %}
-</div>>
+</div>
 
 {% endblock content %}
